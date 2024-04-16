@@ -38,7 +38,7 @@ else:
     print(f'Following Tags are associated : \n {tags}')
 # Expected Output
 Following Tags are associated : 
- [('Exterior', 'Lighting')]
+ [('Exterior', 'Lighting')] ```
 
 ## Conclusion
 This project demonstrates the effective use of web scraping and AWS machine learning tools to implement a multilabel classification system in e-commerce. Such systems can significantly enhance the accuracy of product categorization, improving both the end-user experience and backend management of product listings.
