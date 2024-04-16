@@ -15,7 +15,7 @@ With the data prepared, AWS Comprehend's custom multilabel text classification m
 ## Model Evaluation
 The results from AWS Comprehend include a JSON file containing a confusion matrix. This matrix was visualized using a heatmap to display detailed metrics for each class, providing insights into the model’s performance across different categories.
 
-![Metrics Heatmap](https://github.com/Maryamahmadii/ML-Driven-E-commerce-Categorization-with-Web-Scraping/blob/main/Images/metrics_heatmap.png)
+![Metrics Heatmap](https://github.com/Maryamahmadii/ML-Driven-E-commerce-Categorization-with-Web-Scraping/blob/main/Images/AWS_metrics_heatmap.png)
 
 The heatmap visualization helps in understanding the model's accuracy and precision across various classes, allowing for targeted improvements in category classification.
 
