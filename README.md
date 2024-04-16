@@ -1,4 +1,4 @@
-# ML-Driven E-commerce Categorization with Web Scraping and AWS Comprehend
+# ML-Driven E-commerce Categorization with Web Scraping, BERT Fine-tuning and AWS Comprehend
 
 ## Overview
 This project leverages web scraping to extract detailed product information from e-commerce websites, setting the stage for a sophisticated machine learning approach to categorization. By deploying AWS Comprehend for a multilabel text classification task, the project automatically tags products with multiple relevant categories based on their titles, enhancing product discoverability and user experience.
