@@ -38,7 +38,8 @@ else:
     print(f'Following Tags are associated : \n {tags}')
 
 Following Tags are associated : 
- [('Exterior', 'Lighting')] ```
+ [('Exterior', 'Lighting')]
+```
  
 The model successfully identified the product as belonging to the categories 'Exterior' and 'Lighting'. This test provides a snapshot of how the fine-tuned BERT model performs in practical scenarios, ensuring its effectiveness for e-commerce platforms.
 
