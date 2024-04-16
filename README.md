@@ -28,7 +28,7 @@ The results from AWS Comprehend include a JSON file containing a confusion matri
 ## Inference Testing
 To validate the real-world applicability of the BERT model, we conducted inference tests using actual product names from the Amazon website. The goal was to ascertain the model's capability to categorize products accurately outside the training dataset. Below is a sample Python script demonstrating this test:
 
-```python
+\```python
 product = "ACANII - For 2006-2014 Honda Ridgeline Headlights Headlamps Replacement 06-14 Driver + Passenger Side"
 
 tags = predict(product, model)
@@ -38,7 +38,9 @@ else:
     print(f'Following Tags are associated : \n {tags}')
 # Expected Output
 Following Tags are associated : 
- [('Exterior', 'Lighting')] ```
+ [('Exterior', 'Lighting')] \```
+ 
+The model successfully identified the product as belonging to the categories 'Exterior' and 'Lighting'. This test provides a snapshot of how the fine-tuned BERT model performs in practical scenarios, ensuring its effectiveness for e-commerce platforms.
 
 ## Conclusion
 This project demonstrates the effective use of web scraping and AWS machine learning tools to implement a multilabel classification system in e-commerce. Such systems can significantly enhance the accuracy of product categorization, improving both the end-user experience and backend management of product listings.
