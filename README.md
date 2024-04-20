@@ -26,10 +26,12 @@ The results from AWS Comprehend include a JSON file containing a confusion matri
 
 
 ## Inference Testing
+
+### BERT Lightning Model
 To validate the real-world applicability of the BERT model, we conducted inference tests using actual product names from the Amazon website. The goal was to ascertain the model's capability to categorize products accurately outside the training dataset. Below is a sample Python script demonstrating this test:
 
 ```python
-product = "ACANII - For 2006-2014 Honda Ridgeline Headlights Headlamps Replacement 06-14 Driver + Passenger Side"
+product = 'ACANII - For 2006-2014 Honda Ridgeline Headlights Headlamps Replacement 06-14 Driver + Passenger Side'
 
 tags = predict(product, model)
 if not tags[0]:
@@ -42,6 +44,28 @@ Following Tags are associated :
 ```
  
 The model successfully identified the product as belonging to the categories 'Exterior' and 'Lighting'. This test provides a snapshot of how the fine-tuned BERT model performs in practical scenarios, ensuring its effectiveness for e-commerce platforms.
+
+### AWS Comprehend
+To streamline deployment and demonstrate the adaptability of our model, I created an endpoint on AWS Comprehend. Inference tests were conducted on the endpoint using the same product name from the BERT model testing. Here's a Python code snippet highlighting this process:
+
+```python
+import boto3
+
+comprehend_client = boto3.client(service_name='comprehend') 
+endpointarn = 'Your_Endpoint_Arn'
+product = 'ACANII - For 2006-2014 Honda Ridgeline Headlights Headlamps Replacement 06-14 Driver + Passenger Side'
+
+result = comprehend_client.classify_document(Text=product, EndpointArn=endpointarn)
+
+classes = result['Labels']
+
+for n in classes:
+    print(n['Name'], n['Score'])
+    
+Lighting 0.9998512268066406
+Body Parts 0.9984129667282104
+Exterior 0.9973132014274597
+```
 
 ## Conclusion
 This project demonstrates the effective use of web scraping and AWS machine learning tools to implement a multilabel classification system in e-commerce. Such systems can significantly enhance the accuracy of product categorization, improving both the end-user experience and backend management of product listings.
